@@ -1,5 +1,5 @@
 package test.service;
-
+import entity.Todolist;
 import repository.TodoListRepository;
 import repository.TodoListRepositoryImpl;
 import service.TodoListServiceImpl;
@@ -10,10 +10,10 @@ public class TodoListServiceTest {
     testShowTodoList();
     }
     public static void testShowTodoList(){
-        TodoListRepository todoListRepository = new TodoListRepositoryImpl();
-
+        TodoListRepositoryImpl todoListRepository = new TodoListRepositoryImpl();
+        todoListRepository.data[0] = new Todolist("Yuhu");
+        todoListRepository.data[1] = new Todolist("Uhuy");
         TodoListService todoListService = new TodoListServiceImpl(todoListRepository);
-
         todoListService.showTodoList();
     }
 }

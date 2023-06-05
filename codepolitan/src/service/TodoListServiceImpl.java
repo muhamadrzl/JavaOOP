@@ -12,11 +12,11 @@ public class TodoListServiceImpl implements TodoListService {
         System.out.println("TODO-LIST UDANE SOYO DERES:");
         Todolist[] model = todoListRepository.getAll();
         for (int i = 0; i < model.length; i++){
-            var todo = model[i];
+            var todolist = model[i];
             var no = i+1;
 
-            if (todo!= null){
-                System.out.println(no + ". " + todo);
+            if (todolist!= null){
+                System.out.println(no + ". " + todolist.getTodo());
             }
         }
     }

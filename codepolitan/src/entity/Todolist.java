@@ -2,16 +2,16 @@ package entity;
 
 public class Todolist {
     private String todo;
-    Todolist(String todo)
+    public Todolist(String todo)
     {
         this.todo = todo;
     }
 
-    String getTodo(){
+    public String getTodo(){
         return this.todo;
     }
 
-    void setTodo(String todo){
+    public void setTodo(String todo){
         this.todo = todo;
     }
 }
